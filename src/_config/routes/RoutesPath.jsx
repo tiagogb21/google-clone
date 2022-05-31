@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { ConnectedRouter } from "connected-react-router";
 
-import Main from '../../pages/main/Main';
-import Book from '../../pages/book/Book';
+import Home from '../../pages/Home/Home';
+import SearchPage from '../../pages/SearchPage/SearchPage';
 
 function RoutesPath() {
   return (
