@@ -4,6 +4,9 @@
   height: 93vh;
 }
 
+.home:active {
+}
+
 .home__header {
   display: flex;
   padding: 20px 30px;
@@ -83,6 +86,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  background: rgb(255, 255, 255);
 }
 
 .apps__icon:hover {
