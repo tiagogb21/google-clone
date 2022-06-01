@@ -5,14 +5,33 @@
   width: 25vw;
   border-radius: 10px;
   z-index: 1;
-  border: 1px solid black;
+  border: 1px solid rgb(161, 160, 160);
   padding: 20px;
-  justify-content: center;
   top: 10vh;
   right: 1vw;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.path__container::-webkit-scrollbar-thumb {
+  background-color: rgb(218, 220, 224);
+  border-radius: 5px;
+}
+
+.path__container::-webkit-scrollbar {
+  width: 10px;
+  background: white;
 }
 
 .path1__box, .path2__box {
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+.path__container a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
 }
