@@ -1,0 +1,32 @@
+.footer {
+  height: 7vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3vw;
+  border-top: 1px solid rgb(218, 220, 224, 1);
+  align-items: center;
+}
+
+.about__nav {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terms__nav {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: inherit;
+  color: rgb(112, 117, 122)
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}

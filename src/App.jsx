@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './App.css';
 
 import RoutesPath from './_config/routes/RoutesPath';
