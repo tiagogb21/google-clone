@@ -13,10 +13,13 @@ import './SearchPage.css';
 
 function SearchPage() {
   const [inputSearch, setInputSearch] = useState('');
+  const [items, setItems] = useState('');
+  const [searchInformation, setSearchInformation] = useState('');
 
   const t = async () => {
-    const getData = await fetchAPI(inputSearch);
-    setInputSearch(getData);
+    const getData = await fetchAPI(inputSearch || 'google');
+    setItems(getData.items);
+    setSearchInformation(getData.searchInformation);
   };
 
   useEffect(() => {
@@ -27,6 +30,14 @@ function SearchPage() {
     <main className="search__page">
       <section className="search__page-header">
         <img src="" alt="" />
+        <label htmlFor="search-input">
+          <input
+            type="text"
+            id="search-input"
+            value={inputSearch}
+            onClick={({ target }) => setInputSearch(target.value)}
+          />
+        </label>
       </section>
       <section className="search__page-results">
         <nav className="search__nav-option">
@@ -58,6 +69,34 @@ function SearchPage() {
           </section>
           <Link to="/">Ferramentas</Link>
         </nav>
+        <p>
+          Aproximadamente
+          {' '}
+          {searchInformation.totalResults}
+          {' '}
+          resultados (
+          {searchInformation.searchTime}
+          {' '}
+          segundos)
+        </p>
+      </section>
+      <section className="container__search-items">
+        <section className="search__items">
+          {
+          items.length > 0
+          && (
+            items.map((item) => (
+              <article key={item.cacheId} className="box__item">
+                <a href={item.link}>{ item.title }</a>
+                <p>{ item.snippet }</p>
+              </article>
+            ))
+          )
+        }
+        </section>
+        <section className="container__plus">
+          <h3>Ver resultados relacionados</h3>
+        </section>
       </section>
     </main>
   );
