@@ -1,0 +1,18 @@
+.path__container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 25vw;
+  border-radius: 10px;
+  z-index: 1;
+  border: 1px solid black;
+  padding: 20px;
+  justify-content: center;
+  top: 10vh;
+  right: 1vw;
+}
+
+.path1__box, .path2__box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
