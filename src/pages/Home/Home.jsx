@@ -40,6 +40,18 @@ function Home() {
               <input id="i-am-look" type="button" />
             </label>
           </section>
+          <section>
+            <p>
+              Disponibilizado pelo Google em:
+              <Link
+                to="/"
+                target="_blank"
+                className="language"
+              >
+                Inglês
+              </Link>
+            </p>
+          </section>
         </section>
       </header>
       <HomeFooter />
