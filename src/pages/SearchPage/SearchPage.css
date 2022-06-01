@@ -1,0 +1,10 @@
+.search__nav-option {
+  display: flex;
+  width: 50vw;
+  border: 2px solid black;
+  justify-content: space-between;
+}
+
+.search__nav-option section a {
+  margin: 0 1vw;
+}

@@ -9,7 +9,7 @@ function RoutesPath() {
     <Router>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/search-page" exact element={<SearchPage />} />
+        <Route path="/search" exact element={<SearchPage />} />
       </Routes>
     </Router>
   );
